@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Label x:Name="label" Content="Bem-vindo(a)" HorizontalAlignment="Left" Margin="214,33,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="14"/>
+        <Button x:Name="btn_materiais" Content="Materiais" HorizontalAlignment="Left" Margin="214,88,0,0" VerticalAlignment="Top" Width="95" Height="34"/>
+        <Button x:Name="btn_local" Content="Locais" HorizontalAlignment="Left" Margin="214,139,0,0" VerticalAlignment="Top" Width="95" Height="34"/>
+        <Button x:Name="btn_funcionario" Content="Funcionarios" HorizontalAlignment="Left" Margin="214,191,0,0" VerticalAlignment="Top" Width="95" Height="35"/>
+
     </Grid>
 </Window>
