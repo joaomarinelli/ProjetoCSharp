@@ -95,6 +95,30 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="funcionario_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="armazem_icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="material_icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem_principal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="armazem_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="warehouse-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="warehouse-513.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="material.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

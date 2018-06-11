@@ -7,10 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Label x:Name="label" Content="Bem-vindo(a)" HorizontalAlignment="Left" Margin="214,33,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="14"/>
-        <Button x:Name="btn_materiais" Content="Materiais" HorizontalAlignment="Left" Margin="214,88,0,0" VerticalAlignment="Top" Width="95" Height="34"/>
-        <Button x:Name="btn_local" Content="Locais" HorizontalAlignment="Left" Margin="214,139,0,0" VerticalAlignment="Top" Width="95" Height="34"/>
-        <Button x:Name="btn_funcionario" Content="Funcionarios" HorizontalAlignment="Left" Margin="214,191,0,0" VerticalAlignment="Top" Width="95" Height="35"/>
+        <Image x:Name="imagem_principal_jpg" Source="imagem_principal.jpg" Stretch="Fill"/>
+        <Button x:Name="btn_materiais" Content="Materiais" HorizontalAlignment="Left" Margin="59,26,0,0" VerticalAlignment="Top" Width="95" Height="34" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+        <Button x:Name="btn_local" Content="Locais" HorizontalAlignment="Left" Margin="225,26,0,0" VerticalAlignment="Top" Width="95" Height="34"/>
+        <Button x:Name="btn_funcionario" Content="Funcionarios" HorizontalAlignment="Left" Margin="388,25,0,0" VerticalAlignment="Top" Width="95" Height="35"/>
+        <Image x:Name="funcionario_icon_png" Margin="353,26,134,260" Source="funcionario_icon.png" Stretch="Fill"/>
+        <Image x:Name="warehouse_513_png" Margin="179,25,297,259" Source="warehouse-513.png" Stretch="Fill"/>
+        <Image x:Name="material_png" Margin="19,26,463,258" Source="material.png" Stretch="Fill"/>
 
     </Grid>
 </Window>
