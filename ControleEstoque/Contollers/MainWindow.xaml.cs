@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ControleEstoque
+namespace Contollers
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,14 +23,6 @@ namespace ControleEstoque
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void btn_materiais_Click(object sender, RoutedEventArgs e)
-        {
-            CadastroMateriais cadMat = new CadastroMateriais();
-            //cadUsu.Show();
-            cadMat.ShowDialog();
-            //this.Close();
         }
     }
 }

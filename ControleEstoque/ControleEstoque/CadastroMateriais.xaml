@@ -1,0 +1,17 @@
+﻿<Window x:Class="ControleEstoque.CadastroMateriais"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControleEstoque"
+        mc:Ignorable="d"
+        Title="CadastroMateriais" Height="300" Width="400">
+    <Grid>
+        <Label x:Name="label_Material_Nome" Content="Nome do material" HorizontalAlignment="Left" Margin="26,18,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_NomeMaterial" HorizontalAlignment="Left" Height="23" Margin="132,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="tb_NomeMaterial_TextChanged"/>
+        <Label x:Name="label_MaterialDesc" Content="Descrição" HorizontalAlignment="Left" Margin="26,47,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_MaterialDesc" HorizontalAlignment="Left" Height="23" Margin="132,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btn_SalvarMaterial" Content="Salvar" HorizontalAlignment="Left" Margin="132,87,0,0" VerticalAlignment="Top" Width="120" Click="btn_SalvarMaterial_Click"/>
+
+    </Grid>
+</Window>
