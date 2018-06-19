@@ -50,5 +50,11 @@ namespace ControleEstoque
         {
 
         }
+
+        private void btn_ListarMateriais_Click(object sender, RoutedEventArgs e)
+        {
+            ListaMateriais telaListaMateriais = new ListaMateriais();
+            telaListaMateriais.ShowDialog();
+        }
     }
 }

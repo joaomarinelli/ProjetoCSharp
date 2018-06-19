@@ -27,9 +27,41 @@ namespace ControleEstoque
 
         private void btn_materiais_Click(object sender, RoutedEventArgs e)
         {
-            CadastroMateriais cadMat = new CadastroMateriais();
+            ListaMateriais listMat = new ListaMateriais();
             //cadUsu.Show();
-            cadMat.ShowDialog();
+            listMat.ShowDialog();
+            //this.Close();
+        }
+
+        private void btn_funcionario_Click(object sender, RoutedEventArgs e)
+        {
+            ListarFuncionarios listFunc = new ListarFuncionarios();
+            //cadUsu.Show();
+            listFunc.ShowDialog();
+            //this.Close();
+        }
+
+        private void btn_local_Click(object sender, RoutedEventArgs e)
+        {
+            ListarArmazens listArmazem = new ListarArmazens();
+            //cadUsu.Show();
+            listArmazem.ShowDialog();
+            //this.Close();
+        }
+
+        private void btn_novoRegistro_Click(object sender, RoutedEventArgs e)
+        {
+            Retirada retirada = new Retirada();
+            //cadUsu.Show();
+            retirada.ShowDialog();
+            //this.Close();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Retirada retirada = new Retirada();
+            //cadUsu.Show();
+            retirada.ShowDialog();
             //this.Close();
         }
     }

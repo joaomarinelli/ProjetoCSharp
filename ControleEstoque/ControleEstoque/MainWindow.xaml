@@ -9,11 +9,16 @@
     <Grid>
         <Image x:Name="imagem_principal_jpg" Source="imagem_principal.jpg" Stretch="Fill"/>
         <Button x:Name="btn_materiais" Content="Materiais" HorizontalAlignment="Left" Margin="59,26,0,0" VerticalAlignment="Top" Width="95" Height="34" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Click="btn_materiais_Click"/>
-        <Button x:Name="btn_local" Content="Locais" HorizontalAlignment="Left" Margin="225,26,0,0" VerticalAlignment="Top" Width="95" Height="34"/>
-        <Button x:Name="btn_funcionario" Content="Funcionarios" HorizontalAlignment="Left" Margin="388,25,0,0" VerticalAlignment="Top" Width="95" Height="35"/>
+        <Button x:Name="btn_local" Content="Locais" HorizontalAlignment="Left" Margin="225,26,0,0" VerticalAlignment="Top" Width="95" Height="34" Click="btn_local_Click"/>
+        <Button x:Name="btn_funcionario" Content="Funcionarios" HorizontalAlignment="Left" Margin="388,25,0,0" VerticalAlignment="Top" Width="95" Height="35" Click="btn_funcionario_Click"/>
         <Image x:Name="funcionario_icon_png" Margin="353,26,134,260" Source="funcionario_icon.png" Stretch="Fill"/>
         <Image x:Name="warehouse_513_png" Margin="179,25,297,259" Source="warehouse-513.png" Stretch="Fill"/>
         <Image x:Name="material_png" Margin="19,26,463,258" Source="material.png" Stretch="Fill"/>
+        <Button x:Name="button" HorizontalAlignment="Left" Margin="56,94,0,0" VerticalAlignment="Top" Width="112" Height="128" Click="button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="botao.PNG"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>
