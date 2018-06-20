@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-    class ArmazemController : IBaseController<Armazem>
+    public class ArmazemController : IBaseController<Armazem>
     {
         private Contexto contexto = new Contexto();
 
