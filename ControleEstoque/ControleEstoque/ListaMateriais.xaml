@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ControleEstoque"
         mc:Ignorable="d"
-        Title="ListaMateriais" Height="300" Width="300" Loaded="Window_Loaded">
+        Title="ListaMateriais" Height="300" Width="300">
     <Grid>
-        <DataGrid x:Name="dg_ListaMateriais" HorizontalAlignment="Left" Margin="0,45,-0.4,0" VerticalAlignment="Top" Height="225" Width="294" SelectionChanged="dg_ListaMateriais_SelectionChanged"/>
+        <DataGrid x:Name="dg_ListaMateriais" HorizontalAlignment="Left" Margin="0,45,-0.4,0" VerticalAlignment="Top" Height="225" Width="294" SelectionChanged="dg_ListaMateriais_SelectionChanged" Loaded="Window_Loaded_Materiais"/>
         <Button x:Name="btn_AddMateriais" Content="Novo registro" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Width="90" Background="#FF1FC736" FontWeight="Bold" Click="btn_AddMateriais_Click"/>
 
     </Grid>

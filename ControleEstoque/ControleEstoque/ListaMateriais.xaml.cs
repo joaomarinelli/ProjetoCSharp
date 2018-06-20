@@ -25,13 +25,12 @@ namespace ControleEstoque
         {
             InitializeComponent();
         }
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Window_Loaded_Materiais(object sender, RoutedEventArgs e)
         {
             MaterialController materialController = new MaterialController();
             dg_ListaMateriais.ItemsSource = materialController.ListarTodos();
         }
-
-
+       
         private void dg_ListaMateriais_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
