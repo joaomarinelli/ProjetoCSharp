@@ -34,6 +34,7 @@ namespace ControleEstoque
 
         private void dg_ListaMateriais_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
             DataGrid dg = ((DataGrid)sender);
 
             Material mat = (Material)dg.Items[dg.SelectedIndex];
