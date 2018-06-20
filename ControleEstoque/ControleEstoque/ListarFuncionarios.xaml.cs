@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controllers;
+using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,5 +25,26 @@ namespace ControleEstoque
         {
             InitializeComponent();
         }
+        private void Window_Loaded_Funcionario(object sender, RoutedEventArgs e)
+        {
+            FuncionarioController funcionarioController = new FuncionarioController();
+            dg_ListaFuncionarios.ItemsSource = funcionarioController.ListarTodos();
+        }
+
+
+        private void dg_ListaFuncionarios_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DataGrid dg = ((DataGrid)sender);
+
+            Funcionario func = (Funcionario)dg.Items[dg.SelectedIndex];
+        }
+
+        private void btn_AddFuncionario_Click(object sender, RoutedEventArgs e)
+        {
+            CadastroFuncionarios cadFunc = new CadastroFuncionarios();
+            cadFunc.ShowDialog();
+        }
+
+        
     }
 }
