@@ -39,5 +39,12 @@ namespace ControleEstoque
             Material mat = (Material)dg.Items[dg.SelectedIndex];
         }
 
+        private void btn_AddMateriais_Click(object sender, RoutedEventArgs e)
+        {
+            CadastroMateriais cadMat = new CadastroMateriais();
+            //cadUse.Show();
+            cadMat.ShowDialog();
+            //this.Close();
+        }
     }
 }   
