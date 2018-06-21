@@ -1,4 +1,7 @@
 # ProjetoCSharp
+Equipe:
+Alex e João Victor
+
 Sistema para controle de estoque
 
 Objetivo:

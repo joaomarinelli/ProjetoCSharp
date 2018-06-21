@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="ListarArmazens" Height="300" Width="300">
     <Grid>
-        <DataGrid x:Name="dg_armazens" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Height="230" Width="272" SelectionChanged="dg_armazens_SelectionChanged"/>
+        <DataGrid x:Name="dg_ListarArmazens" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Height="230" Width="272" SelectionChanged="dg_armazens_SelectionChanged" Loaded="Window_Loaded_Armazem"/>
         <Button x:Name="btn_AddArmazem" Content="Novo registro" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="101" FontWeight="Bold" Background="#FF21C928" Click="btn_AddArmazem_Click"/>
 
     </Grid>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controllers;
+using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,18 +25,24 @@ namespace ControleEstoque
         {
             InitializeComponent();
         }
-
-        private void btn_AddArmazem_Click(object sender, RoutedEventArgs e)
+        private void Window_Loaded_Armazem(object sender, RoutedEventArgs e)
         {
-            CadastroArmazem cadArmazem = new CadastroArmazem();
-            //cadUsu.Show();
-            cadArmazem.ShowDialog();
-            //this.Close();
+            ArmazemController armazemController = new ArmazemController();
+            dg_ListarArmazens.ItemsSource = armazemController.ListarTodos();
         }
 
         private void dg_armazens_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            DataGrid dg = ((DataGrid)sender);
 
+            Armazem arm = (Armazem)dg.Items[dg.SelectedIndex];
+        }
+
+        private void btn_AddArmazem_Click(object sender, RoutedEventArgs e)
+        {
+            CadastroArmazem cadArm = new CadastroArmazem();
+
+            cadArm.ShowDialog();
         }
     }
 }

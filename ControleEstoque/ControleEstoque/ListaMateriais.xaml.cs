@@ -25,15 +25,15 @@ namespace ControleEstoque
         {
             InitializeComponent();
         }
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Window_Loaded_Materiais(object sender, RoutedEventArgs e)
         {
             MaterialController materialController = new MaterialController();
             dg_ListaMateriais.ItemsSource = materialController.ListarTodos();
         }
-
-
+       
         private void dg_ListaMateriais_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
             DataGrid dg = ((DataGrid)sender);
 
             Material mat = (Material)dg.Items[dg.SelectedIndex];
@@ -42,11 +42,9 @@ namespace ControleEstoque
         private void btn_AddMateriais_Click(object sender, RoutedEventArgs e)
         {
             CadastroMateriais cadMat = new CadastroMateriais();
-            //cadUsu.Show();
+            //cadUse.Show();
             cadMat.ShowDialog();
             //this.Close();
         }
-
-
     }
 }   

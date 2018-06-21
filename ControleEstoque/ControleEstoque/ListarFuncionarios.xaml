@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="ListarFuncionarios" Height="300" Width="300">
     <Grid>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top" Height="232" Width="272" SelectionChanged="dataGrid_SelectionChanged"/>
-        <Button x:Name="btn_AddFuncionario" Content="Novo registro" HorizontalAlignment="Left" Margin="10,0,0,248" VerticalAlignment="Bottom" Width="88" Background="#FF12D447" FontWeight="Bold" Click="btn_AddFuncionario_Click"/>
+        <DataGrid x:Name="dg_ListaFuncionarios" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top" Height="232" Width="272" SelectionChanged="dg_ListaFuncionarios_SelectionChanged" Loaded="Window_Loaded_Funcionario"/>
+        <Button x:Name="btn_AddFuncionario" Content="Novo registro" HorizontalAlignment="Left" Margin="10,1,0,0" VerticalAlignment="Top" Width="88" Background="#FF12D447" FontWeight="Bold" Click="btn_AddFuncionario_Click"/>
 
     </Grid>
 </Window>
