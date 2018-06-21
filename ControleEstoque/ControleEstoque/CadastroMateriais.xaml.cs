@@ -39,6 +39,10 @@ namespace ControleEstoque
                 materialController.Adicionar(mat);
 
                 MessageBox.Show("Material salvo com sucesso!");
+
+                ListaMateriais dg_ListaMateriais = new ListaMateriais();
+                dg_ListaMateriais.Show();
+                this.Close();
             }
             catch (Exception ex)
             {
