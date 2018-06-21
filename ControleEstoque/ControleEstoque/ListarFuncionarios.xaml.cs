@@ -23,5 +23,18 @@ namespace ControleEstoque
         {
             InitializeComponent();
         }
+
+        private void btn_AddFuncionario_Click(object sender, RoutedEventArgs e)
+        {
+            CadastroFuncionarios cadFunc = new CadastroFuncionarios();
+            //cadUsu.Show();
+            cadFunc.ShowDialog();
+            //this.Close();
+        }
+
+        private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

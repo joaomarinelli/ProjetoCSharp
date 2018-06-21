@@ -11,7 +11,7 @@
         <TextBox x:Name="tb_local" HorizontalAlignment="Left" Height="23" Margin="105,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="label_DescArmazem" Content="Descrição" HorizontalAlignment="Left" Margin="39,47,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tb_DescArmazem" HorizontalAlignment="Left" Height="23" Margin="105,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btn_salvarArmazem" Content="Salvar" HorizontalAlignment="Left" Margin="105,77,0,0" VerticalAlignment="Top" Width="120" Height="30" Background="#FF14C55C"/>
+        <Button x:Name="btn_salvarArmazem" Content="Salvar" HorizontalAlignment="Left" Margin="105,77,0,0" VerticalAlignment="Top" Width="120" Height="30" Background="#FF14C55C" Click="btn_salvarArmazem_Click"/>
 
     </Grid>
 </Window>

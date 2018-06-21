@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controllers;
+using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,26 @@ namespace ControleEstoque
         public CadastroArmazem()
         {
             InitializeComponent();
+        }
+
+        private void btn_salvarArmazem_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Armazem arm = new Armazem();
+
+                arm.Local= tb_local.Text;
+                arm.ArmazemDesc = tb_DescArmazem.Text;
+
+                ArmazemController armazemController = new ArmazemController();
+                armazemController.Adicionar(arm);
+
+                MessageBox.Show("Armazem salvo com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao salvar o armazem (" + ex.Message + ")");
+            }
         }
     }
 }

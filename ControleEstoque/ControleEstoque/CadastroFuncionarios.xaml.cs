@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controllers;
+using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,26 @@ namespace ControleEstoque
         public CadastroFuncionarios()
         {
             InitializeComponent();
+        }
+
+        private void btn_salvarFunc_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Funcionario func = new Funcionario();
+
+                func.NomeFuncionario = tb_nomeFunc.Text;
+                func.Cargo = tb_cargoFunc.Text;
+
+                FuncionarioController funcionarioController = new FuncionarioController();
+                funcionarioController.Adicionar(func);
+
+                MessageBox.Show("Funcionairo salvo com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao salvar o funcionario (" + ex.Message + ")");
+            }
         }
     }
 }
