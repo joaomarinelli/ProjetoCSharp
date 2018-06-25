@@ -38,7 +38,12 @@ namespace ControleEstoque
                 ArmazemController armazemController = new ArmazemController();
                 armazemController.Adicionar(arm);
 
+                this.Close();
                 MessageBox.Show("Armazem salvo com sucesso!");
+
+                ListarArmazens dg_listarArmazens = new ListarArmazens();
+                dg_listarArmazens.Show();
+                this.Close();
             }
             catch (Exception ex)
             {

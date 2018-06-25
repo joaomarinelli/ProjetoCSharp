@@ -42,7 +42,9 @@ namespace ControleEstoque
         {
             CadastroArmazem cadArm = new CadastroArmazem();
 
-            cadArm.ShowDialog();
+            cadArm.Show();
+            this.Close();
+
         }
     }
 }
