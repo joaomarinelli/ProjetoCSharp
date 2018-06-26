@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controllers.DAL;
+using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,24 @@ namespace ControleEstoque
         public Retirada()
         {
             InitializeComponent();
+            bindcombo();
         }
+
+        public List<Armazem> Lista { get; set; }
+        private void bindcombo()
+        {
+            // throw new NotImplementedException();
+            Contexto ctx = new Contexto();
+            var item = ctx.Armazens.ToList();
+            Lista = item;
+            DataContext = Lista;
+        }
+
+        private void cbo_armazens_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+                
+        }
+
+      
     }
 }

@@ -64,5 +64,27 @@ namespace ControleEstoque
             retirada.ShowDialog();
             //this.Close();
         }
+
+        private void img_teste_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Retirada retirada = new Retirada();
+            //cadUsu.Show();
+            retirada.ShowDialog();
+            //this.Close();
+        
+    }
+
+        private void botao_PNG_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Retirada retirada = new Retirada();
+            //cadUsu.Show();
+            retirada.ShowDialog();
+            //this.Close();
+        }
+
+        private void shutdown_png_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

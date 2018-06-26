@@ -1,4 +1,5 @@
 ﻿using Controllers;
+using Controllers.DAL;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,17 @@ namespace ControleEstoque
         public CadastroMateriais()
         {
             InitializeComponent();
+            bindcombo();
+        }
+
+        public List<Armazem> Lista { get; set; }
+        private void bindcombo()
+        {
+            // throw new NotImplementedException();
+            Contexto ctx = new Contexto();
+            var item = ctx.Armazens.ToList();
+            Lista = item;
+            DataContext = Lista;
         }
 
         private void btn_SalvarMaterial_Click(object sender, RoutedEventArgs e)
@@ -34,6 +46,11 @@ namespace ControleEstoque
 
                 mat.MaterialNome = tb_NomeMaterial.Text;
                 mat.MaterialDesc = tb_MaterialDesc.Text;
+                //mat.Local_Armazem = cbo_armazens
+                //mat.Local_Armazem = cbo_armazens.SelectedItem.ToString;
+                //var selectedItem = cbo_armazens.SelectedItem;
+
+                //ComboBoxItem cbi = cbo_armazens.ItemContainerGenerator.ContainerFromItem(selectedItem) as ComboBoxItem;
 
                 MaterialController materialController = new MaterialController();
                 materialController.Adicionar(mat);
@@ -55,6 +72,16 @@ namespace ControleEstoque
         {
             ListaMateriais telaListaMateriais = new ListaMateriais();
             telaListaMateriais.ShowDialog();
+        }
+
+        private void cbo_materiais_armazens_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
+
+        private void cbo_armazens_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

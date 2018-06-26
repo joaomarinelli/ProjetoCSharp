@@ -45,5 +45,10 @@ namespace ControleEstoque
                 MessageBox.Show("Erro ao salvar o funcionario (" + ex.Message + ")");
             }
         }
+
+        private void dg_ListaFuncionarios(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

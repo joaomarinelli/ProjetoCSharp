@@ -5,20 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ControleEstoque"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="350" Width="525" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" ResizeMode="NoResize">
     <Grid>
-        <Image x:Name="imagem_principal_jpg" Source="imagem_principal.jpg" Stretch="Fill"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="imagem_principal_jpg" Source="imagem_principal.jpg" Stretch="Fill" Grid.ColumnSpan="2"/>
         <Button x:Name="btn_materiais" Content="Materiais" HorizontalAlignment="Left" Margin="59,26,0,0" VerticalAlignment="Top" Width="95" Height="34" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Click="btn_materiais_Click"/>
         <Button x:Name="btn_local" Content="Locais" HorizontalAlignment="Left" Margin="225,26,0,0" VerticalAlignment="Top" Width="95" Height="34" Click="btn_local_Click"/>
-        <Button x:Name="btn_funcionario" Content="Funcionarios" HorizontalAlignment="Left" Margin="388,25,0,0" VerticalAlignment="Top" Width="95" Height="35" Click="btn_funcionario_Click"/>
-        <Image x:Name="funcionario_icon_png" Margin="353,26,134,260" Source="funcionario_icon.png" Stretch="Fill"/>
-        <Image x:Name="warehouse_513_png" Margin="179,25,297,259" Source="warehouse-513.png" Stretch="Fill"/>
-        <Image x:Name="material_png" Margin="19,26,463,258" Source="material.png" Stretch="Fill"/>
-        <Button x:Name="button" HorizontalAlignment="Left" Margin="56,94,0,0" VerticalAlignment="Top" Width="112" Height="128" Click="button_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="botao.PNG"/>
-            </Button.Background>
-        </Button>
+        <Button x:Name="btn_funcionario" Content="Funcionarios" HorizontalAlignment="Left" Margin="388,25,0,0" VerticalAlignment="Top" Width="95" Height="35" Click="btn_funcionario_Click" Grid.ColumnSpan="2"/>
+        <Image x:Name="funcionario_icon_png" Margin="353,26,20,260" Source="funcionario_icon.png" Stretch="Fill"/>
+        <Image x:Name="warehouse_513_png" Margin="179,25,183,259" Source="warehouse-513.png" Stretch="Fill"/>
+        <Image x:Name="material_png" Margin="19,26,349,258" Source="material.png" Stretch="Fill"/>
+        <Image x:Name="img_teste" Margin="75,235,251,0" Source="Malwee-Camiseta-Malwee-Cores-Amarela-1216-0666741-1-zoom.jpg" Stretch="Fill" MouseLeftButtonDown="img_teste_MouseLeftButtonDown"/>
+        <Image x:Name="botao_PNG" Margin="49,90,231,91" Source="botao.PNG" Stretch="Fill" MouseLeftButtonDown="botao_PNG_MouseLeftButtonDown"/>
+        <Image x:Name="shutdown_png" Margin="85,0,0,297" Source="shutdown.png" Stretch="Fill" Grid.Column="1"/>
 
     </Grid>
 </Window>
