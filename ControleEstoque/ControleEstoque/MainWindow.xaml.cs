@@ -57,12 +57,15 @@ namespace ControleEstoque
             //this.Close();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+      
+        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Retirada retirada = new Retirada();
             //cadUsu.Show();
             retirada.ShowDialog();
             //this.Close();
         }
+       
+
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ControleEstoque"
         mc:Ignorable="d"
-        Title="ListarFuncionarios" Height="300" Width="300">
+        Title="ListarFuncionarios" Height="300" Width="300" WindowStartupLocation="CenterScreen">
     <Grid>
         <DataGrid x:Name="dg_ListaFuncionarios" Margin="0,50,0,0" SelectionChanged="dg_ListaFuncionarios_SelectionChanged" Loaded="Window_Loaded_Funcionario"/>
         <Button x:Name="btn_AddFuncionario" Content="Novo registro" Width="106" Margin="11,10,0,0" Background="#FF12D447" FontWeight="Bold" Click="btn_AddFuncionario_Click" RenderTransformOrigin="0.554,0.523" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top"/>

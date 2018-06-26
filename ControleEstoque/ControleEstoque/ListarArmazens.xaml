@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ControleEstoque"
         mc:Ignorable="d"
-        Title="ListarArmazens" Height="300" Width="300">
+        Title="ListarArmazens" Height="300" Width="300" WindowStartupLocation="CenterScreen">
     <Grid>
         <DataGrid x:Name="dg_ListarArmazens" Margin="0,50,0,0" SelectionChanged="dg_armazens_SelectionChanged" Loaded="Window_Loaded_Armazem"/>
         <Button x:Name="btn_AddArmazem" Content="Novo registro" Margin="11,10,0,0" FontWeight="Bold" Background="#FF21C928" Click="btn_AddArmazem_Click" HorizontalAlignment="Left" Width="106" Height="25" VerticalAlignment="Top"/>
