@@ -42,7 +42,9 @@ namespace ControleEstoque
         private void btn_AddFuncionario_Click(object sender, RoutedEventArgs e)
         {
             CadastroFuncionarios cadFunc = new CadastroFuncionarios();
-            cadFunc.ShowDialog();
+            cadFunc.Show();
+
+            this.Close();
         }
 
         

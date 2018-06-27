@@ -54,8 +54,12 @@ namespace ControleEstoque
 
                 MaterialController materialController = new MaterialController();
                 materialController.Adicionar(mat);
-
+                this.Close();
                 MessageBox.Show("Material salvo com sucesso!");
+
+                ListaMateriais dg_ListaMateriais = new ListaMateriais();
+                dg_ListaMateriais.Show();
+                this.Close();
             }
             catch (Exception ex)
             {

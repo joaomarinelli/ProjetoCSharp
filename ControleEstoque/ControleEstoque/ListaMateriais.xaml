@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ControleEstoque"
         mc:Ignorable="d"
-        Title="ListaMateriais" Height="300" Width="300">
+        Title="ListaMateriais" Height="300" Width="300" WindowStartupLocation="CenterScreen">
     <Grid>
-        <DataGrid x:Name="dg_ListaMateriais" HorizontalAlignment="Left" Margin="0,45,-0.4,0" VerticalAlignment="Top" Height="225" Width="294" SelectionChanged="dg_ListaMateriais_SelectionChanged" Loaded="Window_Loaded_Materiais" AutoGenerateColumns="False"/>
-        <Button x:Name="btn_AddMateriais" Content="Novo registro" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Width="90" Background="#FF1FC736" FontWeight="Bold" Click="btn_AddMateriais_Click"/>
+        <DataGrid x:Name="dg_ListaMateriais" Margin="0,50,0,0" SelectionChanged="dg_ListaMateriais_SelectionChanged" Loaded="Window_Loaded_Materiais" IsSynchronizedWithCurrentItem="False" Background="{x:Null}"/>
+        <Button x:Name="btn_AddMateriais" Content="Novo registro" Margin="11,10,0,0" Background="#FF1FC736" FontWeight="Bold" Click="btn_AddMateriais_Click" HorizontalAlignment="Left" Width="96" Height="25" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

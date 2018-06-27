@@ -164,9 +164,6 @@
     <Resource Include="material_icon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imagem_principal.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="armazem_icon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -189,7 +186,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="botao.PNG" />
+    <Resource Include="botão_principal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Principal_estoque.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Malwee-Camiseta-Malwee-Cores-Amarela-1216-0666741-1-zoom.jpg" />
