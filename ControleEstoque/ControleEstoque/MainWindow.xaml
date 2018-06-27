@@ -16,7 +16,7 @@
         <Image x:Name="funcionario_icon_png" Margin="770,26,0,0" Source="funcionario_icon.png" Stretch="Fill" HorizontalAlignment="Left" Width="37" Height="44" VerticalAlignment="Top" RenderTransformOrigin="7.8,0.726"/>
         <Image x:Name="warehouse_513_png" Margin="411,28,0,0" Source="warehouse-513.png" Stretch="Fill" HorizontalAlignment="Left" Width="50" Height="43" VerticalAlignment="Top" RenderTransformOrigin="0.024,0.6"/>
         <Image x:Name="material_png" Margin="90,25,0,0" Source="material.png" Stretch="Fill" HorizontalAlignment="Left" Width="42" Height="44" VerticalAlignment="Top" RenderTransformOrigin="1.983,0.514"/>
-        <Image Margin="125,272,0,0" Source="botão_principal.png" MouseLeftButtonDown="Image_MouseLeftButtonDown" Height="125" VerticalAlignment="Top" HorizontalAlignment="Left" Width="93" Stretch="Fill"/>
+        <Image Margin="145,247,751.6,200.4" Source="botão_principalcopia.png" Stretch="Fill" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
 
     </Grid>
 </Window>
