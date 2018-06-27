@@ -57,7 +57,6 @@ namespace ControleEstoque
             //this.Close();
         }
 
-      
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Retirada retirada = new Retirada();
@@ -65,7 +64,5 @@ namespace ControleEstoque
             retirada.ShowDialog();
             //this.Close();
         }
-       
-
     }
 }
