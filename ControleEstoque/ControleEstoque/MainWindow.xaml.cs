@@ -49,14 +49,6 @@ namespace ControleEstoque
             //this.Close();
         }
 
-        private void btn_novoRegistro_Click(object sender, RoutedEventArgs e)
-        {
-            Retirada retirada = new Retirada();
-            //cadUsu.Show();
-            retirada.ShowDialog();
-            //this.Close();
-        }
-
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Retirada retirada = new Retirada();
@@ -64,5 +56,6 @@ namespace ControleEstoque
             retirada.ShowDialog();
             //this.Close();
         }
+    
     }
 }
