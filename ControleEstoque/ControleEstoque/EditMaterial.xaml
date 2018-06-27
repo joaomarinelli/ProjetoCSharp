@@ -1,0 +1,19 @@
+﻿<Window x:Class="ControleEstoque.EditMaterial"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControleEstoque"
+        mc:Ignorable="d"
+        Title="EditMaterial" Height="300" Width="300">
+    <Grid>
+        <Label x:Name="label" Content="Nome" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.263,0.231"/>
+        <Label x:Name="label1" Content="Descrição" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Quantidade" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_update_nome_material" HorizontalAlignment="Left" Height="23" Margin="103,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_update_desc_material" HorizontalAlignment="Left" Height="23" Margin="103,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_update_qtde_material" HorizontalAlignment="Left" Height="23" Margin="103,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btn_salvar_update_material" Content="Salvar" HorizontalAlignment="Left" Margin="103,119,0,0" VerticalAlignment="Top" Width="120" Height="25" Click="btn_salvar_update_material_Click"/>
+
+    </Grid>
+</Window>

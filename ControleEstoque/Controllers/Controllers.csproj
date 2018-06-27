@@ -67,6 +67,10 @@
     <Compile Include="Migrations\201806251310544_Add_Table_Material_Armazem.Designer.cs">
       <DependentUpon>201806251310544_Add_Table_Material_Armazem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806262358114_Add_Table.cs" />
+    <Compile Include="Migrations\201806262358114_Add_Table.Designer.cs">
+      <DependentUpon>201806262358114_Add_Table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RetiradaController.cs" />
@@ -90,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806251310544_Add_Table_Material_Armazem.resx">
       <DependentUpon>201806251310544_Add_Table_Material_Armazem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806262358114_Add_Table.resx">
+      <DependentUpon>201806262358114_Add_Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

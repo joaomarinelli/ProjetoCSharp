@@ -32,10 +32,10 @@ namespace ControleEstoque
         private void bindcombo()
         {
             // throw new NotImplementedException();
-            Contexto ctx = new Contexto();
-            var item = ctx.Armazens.ToList();
-            Lista = item;
-            DataContext = Lista;
+           Contexto ctx = new Contexto();
+           var item = ctx.Armazens.ToList();
+           Lista = item;
+           DataContext = Lista;
         }
 
         private void btn_SalvarMaterial_Click(object sender, RoutedEventArgs e)
@@ -43,6 +43,8 @@ namespace ControleEstoque
             try
             {
                 Material mat = new Material();
+
+                mat.Local_Armazem = (Armazem)this.cbo_armazens.SelectedItem;
 
                 mat.MaterialNome = tb_NomeMaterial.Text;
                 mat.MaterialDesc = tb_MaterialDesc.Text;

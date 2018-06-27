@@ -5,10 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ControleEstoque"
         mc:Ignorable="d"
-        Title="ListaMateriais" Height="300" Width="300" WindowStartupLocation="CenterScreen">
-    <Grid>
-        <DataGrid x:Name="dg_ListaMateriais" Margin="0,50,0,0" SelectionChanged="dg_ListaMateriais_SelectionChanged" Loaded="Window_Loaded_Materiais" IsSynchronizedWithCurrentItem="False" Background="{x:Null}"/>
-        <Button x:Name="btn_AddMateriais" Content="Novo registro" Margin="11,10,0,0" Background="#FF1FC736" FontWeight="Bold" Click="btn_AddMateriais_Click" HorizontalAlignment="Left" Width="96" Height="25" VerticalAlignment="Top"/>
-
-    </Grid>
+        Title="ListaMateriais" Height="392" Width="621" WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <DataGrid x:Name="dg_ListaMateriais" x:FieldModifier="public" AutoGenerateColumns="False" ColumnWidth="*" Margin="0,10,0,0" Width="471" SelectionChanged="dg_ListaMateriais_SelectionChanged_1" Loaded="Windows_Loaded_Materiais" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding MaterialId}" />
+                <DataGridTextColumn Header="Nome" Binding="{Binding MaterialNome}" />
+                <DataGridTextColumn Header="Descrição" Binding="{Binding MaterialDesc}" />
+                <DataGridTextColumn Header="Qtde." Binding="{Binding QuantidadeCadastrada}" />
+                <DataGridTextColumn Header="Armazem" Binding="{Binding Local_Armazem}" />
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="Action" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.HeaderTemplate>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="insertBtn" Content="Insert" Click="insertBtn_Click" />
+                                <Button x:Name="updateBtn" Content="Update" Click="updateBtn_Click" />
+                                <Button x:Name="deleteBtn" Content="Delete" Click="deleteBtn_Click"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btn_AddMateriais" Content="Button" Height="54" VerticalAlignment="Center" Width="120" Click="btn_AddMateriais_Click_1"/>
+    </DockPanel>
 </Window>
