@@ -46,7 +46,6 @@ namespace ControleEstoque
 
             this.Close();
         }
-
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
             int id = (dg_ListaFuncionarios.SelectedItem as Funcionario).FuncionarioId;
@@ -60,5 +59,7 @@ namespace ControleEstoque
             EditFuncionario EditFunc = new EditFuncionario(id);
             EditFunc.Show();
         }
+
+
     }
 }
