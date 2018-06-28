@@ -38,14 +38,14 @@ namespace ControleEstoque
                 FuncionarioController funcionarioController = new FuncionarioController();
                 funcionarioController.Adicionar(func);
 
+                
+                MessageBox.Show("Funcionario salvo com sucesso!");
                 this.Close();
-                MessageBox.Show("Funcionairo salvo com sucesso!");
 
                 ListarFuncionarios dg_listarFuncionarios = new ListarFuncionarios();
                 dg_listarFuncionarios.Show();
                 this.Close();
-
-
+                
             }
             catch (Exception ex)
             {
@@ -53,9 +53,5 @@ namespace ControleEstoque
             }
         }
 
-        private void dg_ListaFuncionarios(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
