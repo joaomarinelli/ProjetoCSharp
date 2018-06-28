@@ -79,7 +79,7 @@ namespace ControleEstoque
 
         private void dg_ListaMateriais_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
-            DataGrid dg = ((DataGrid)sender);
+             DataGrid dg = ((DataGrid)sender);
 
             Material mat = (Material)dg.Items[dg.SelectedIndex];
         }

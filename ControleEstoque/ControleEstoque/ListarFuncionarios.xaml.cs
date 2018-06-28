@@ -47,6 +47,18 @@ namespace ControleEstoque
             this.Close();
         }
 
-        
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            int id = (dg_ListaFuncionarios.SelectedItem as Funcionario).FuncionarioId;
+            EditFuncionario EditFunc = new EditFuncionario(id);
+            EditFunc.Show();
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            int id = (dg_ListaFuncionarios.SelectedItem as Funcionario).FuncionarioId;
+            EditFuncionario EditFunc = new EditFuncionario(id);
+            EditFunc.Show();
+        }
     }
 }
