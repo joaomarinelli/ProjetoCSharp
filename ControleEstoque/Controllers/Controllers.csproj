@@ -71,6 +71,14 @@
     <Compile Include="Migrations\201806262358114_Add_Table.Designer.cs">
       <DependentUpon>201806262358114_Add_Table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806280107351_Update_Material.cs" />
+    <Compile Include="Migrations\201806280107351_Update_Material.Designer.cs">
+      <DependentUpon>201806280107351_Update_Material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806280113084_Add_CodMaterial.cs" />
+    <Compile Include="Migrations\201806280113084_Add_CodMaterial.Designer.cs">
+      <DependentUpon>201806280113084_Add_CodMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RetiradaController.cs" />
@@ -97,6 +105,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806262358114_Add_Table.resx">
       <DependentUpon>201806262358114_Add_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806280107351_Update_Material.resx">
+      <DependentUpon>201806280107351_Update_Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806280113084_Add_CodMaterial.resx">
+      <DependentUpon>201806280113084_Add_CodMaterial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
