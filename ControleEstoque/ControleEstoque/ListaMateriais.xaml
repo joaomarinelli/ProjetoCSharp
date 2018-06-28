@@ -13,7 +13,7 @@
                 <DataGridTextColumn Header="Nome" Binding="{Binding MaterialNome}" />
                 <DataGridTextColumn Header="Descrição" Binding="{Binding MaterialDesc}" />
                 <DataGridTextColumn Header="Qtde." Binding="{Binding QuantidadeCadastrada}" />
-                <DataGridTextColumn Header="Armazem" Binding="{Binding Local_Armazem}" />
+                <DataGridTextColumn Header="Armazem" Binding="{Binding Local_Armazem.Armazem}" />
                 <DataGridTemplateColumn>
 
                     <DataGridTemplateColumn.CellTemplate>

@@ -44,14 +44,16 @@ namespace ControleEstoque
             {
                 Material mat = new Material();
 
-                mat.Local_Armazem = (Armazem)this.cbo_armazens.SelectedItem;
+               // mat.Local_Armazem = (Armazem)this.cbo_armazens.SelectedItem;
 
                 mat.MaterialNome = tb_NomeMaterial.Text;
                 mat.MaterialDesc = tb_MaterialDesc.Text;
                 //mat.Local_Armazem = cbo_armazens
                 //mat.Local_Armazem = cbo_armazens.SelectedItem.ToString;
-                //var selectedItem = cbo_armazens.SelectedItem;
+                var selectedItem = ((Armazem)cbo_armazens.SelectedItem).ArmazemId;
 
+                //mat.Local_Armazem = 
+                //cbo_armazens.SelectedItem = Convert.ToInt32(cbo_armazens);
                 //ComboBoxItem cbi = cbo_armazens.ItemContainerGenerator.ContainerFromItem(selectedItem) as ComboBoxItem;
 
                 MaterialController materialController = new MaterialController();

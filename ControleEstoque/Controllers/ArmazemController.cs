@@ -44,7 +44,7 @@ namespace Controllers
                 // forma 2
                 //contexto.Entry(a).State = System.Data.Entity.EntityState.Deleted;
 
-                //contexto.SaveChanges();
+                contexto.SaveChanges();
             }
         }
 

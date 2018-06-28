@@ -95,15 +95,21 @@ namespace ControleEstoque
 
         private void btn_adicionar_material_Click(object sender, RoutedEventArgs e)
         {
-            Material material = new Material();
+            CadastroMateriais cadMat = new CadastroMateriais();
+            cadMat.Show();
 
-            material.CodMaterial = Convert.ToInt32(txt_id_material.Text);
-            material.MaterialNome = txt_nome_material1.Text;
-            material.MaterialDesc = txt_desc_material.Text;
-            material.QuantidadeCadastrada = txt_qtde_material.Text;
-            MaterialController materialController = new MaterialController();
-            materialController.Adicionar(material);
-            dg_ListaMateriais.ItemsSource = ctx.Materiais.ToList();
+            this.Close();
+
+            /* Material material = new Material();
+
+
+             material.CodMaterial = Convert.ToInt32(txt_id_material.Text);
+             material.MaterialNome = txt_nome_material1.Text;    
+             material.MaterialDesc = txt_desc_material.Text;
+             material.QuantidadeCadastrada = txt_qtde_material.Text;
+             MaterialController materialController = new MaterialController();
+             materialController.Adicionar(material);
+             dg_ListaMateriais.ItemsSource = ctx.Materiais.ToList();*/
 
         }
 
