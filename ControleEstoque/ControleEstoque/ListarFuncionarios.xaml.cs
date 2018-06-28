@@ -1,4 +1,5 @@
 ﻿using Controllers;
+using Controllers.DAL;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -21,10 +22,13 @@ namespace ControleEstoque
     /// </summary>
     public partial class ListarFuncionarios : Window
     {
+        private static Contexto ctx = new Contexto();
         public ListarFuncionarios()
         {
             InitializeComponent();
+            
         }
+
         private void Window_Loaded_Funcionario(object sender, RoutedEventArgs e)
         {
             FuncionarioController funcionarioController = new FuncionarioController();
@@ -35,7 +39,6 @@ namespace ControleEstoque
         private void dg_ListaFuncionarios_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             DataGrid dg = ((DataGrid)sender);
-
             Funcionario func = (Funcionario)dg.Items[dg.SelectedIndex];
         }
 
@@ -43,7 +46,6 @@ namespace ControleEstoque
         {
             CadastroFuncionarios cadFunc = new CadastroFuncionarios();
             cadFunc.Show();
-
             this.Close();
         }
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
@@ -51,13 +53,17 @@ namespace ControleEstoque
             int id = (dg_ListaFuncionarios.SelectedItem as Funcionario).FuncionarioId;
             EditFuncionario EditFunc = new EditFuncionario(id);
             EditFunc.Show();
+            this.Close();
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
+
             int id = (dg_ListaFuncionarios.SelectedItem as Funcionario).FuncionarioId;
-            EditFuncionario EditFunc = new EditFuncionario(id);
-            EditFunc.Show();
+            FuncionarioController funcController = new FuncionarioController();
+
+            funcController.Excluir(id);
+           // dg_ListaFuncionarios.ItemsSource = ctx.Funcionarios.ToList();
         }
 
 

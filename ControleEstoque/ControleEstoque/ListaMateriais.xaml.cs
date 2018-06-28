@@ -28,57 +28,6 @@ namespace ControleEstoque
         {
             InitializeComponent();
         }
-        private void Window_Loaded_Materiais(object sender, RoutedEventArgs e)
-        {
-            MaterialController materialController = new MaterialController();
-            dg_ListaMateriais.ItemsSource = materialController.ListarTodos();
-        }
-
-        /* private void dg_ListaMateriais_SelectionChanged(object sender, SelectionChangedEventArgs e)
-         {
-
-             DataGrid dg = ((DataGrid)sender);
-
-             Material mat = (Material)dg.Items[dg.SelectedIndex];
-         }*/
-
-        private void btn_AddMateriais_Click(object sender, RoutedEventArgs e)
-        {
-            CadastroMateriais cadMat = new CadastroMateriais();
-            cadMat.Show();
-            
-            this.Close();
-        }
-
-        private void insertBtn_Click(object sender, RoutedEventArgs e)
-        {
-            CadastroMateriais cadMat = new CadastroMateriais();
-            cadMat.Show();
-
-            this.Close();
-        }
-
-        private void updateBtn_Click(object sender, RoutedEventArgs e)
-        {
-            int id = (dg_ListaMateriais.SelectedItem as Material).MaterialId;
-            EditMaterial EMaterial = new EditMaterial(id);
-            EMaterial.Show();
-        }
-
-        private void deleteBtn_Click(object sender, RoutedEventArgs e)
-        {
-            int id = (dg_ListaMateriais.SelectedItem as Material).MaterialId;
-            EditMaterial EMaterial = new EditMaterial(id);
-            EMaterial.Show();
-        }
-
-        private void btn_AddMateriais_Click_1(object sender, RoutedEventArgs e)
-        {
-            CadastroMateriais cadMat = new CadastroMateriais();
-            cadMat.Show();
-
-            this.Close();
-        }
 
         private void dg_ListaMateriais_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
