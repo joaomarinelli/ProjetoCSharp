@@ -42,10 +42,9 @@ namespace Controllers
                 // forma 1
                 contexto.Funcionarios.Remove(f);
 
-                // forma 2
-                //contexto.Entry(a).State = System.Data.Entity.EntityState.Deleted;
+                
 
-                //contexto.SaveChanges();
+                contexto.SaveChanges();
             }
         }
 

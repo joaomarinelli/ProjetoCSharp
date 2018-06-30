@@ -11,8 +11,10 @@
         <TextBox x:Name="tb_NomeMaterial" HorizontalAlignment="Left" Height="23" Margin="132,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="tb_NomeMaterial_TextChanged"/>
         <Label x:Name="label_MaterialDesc" Content="Descrição" HorizontalAlignment="Left" Margin="26,74,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tb_MaterialDesc" HorizontalAlignment="Left" Height="23" Margin="132,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btn_SalvarMaterial" Content="Salvar" HorizontalAlignment="Left" Margin="132,130,0,0" VerticalAlignment="Top" Width="120" Click="btn_SalvarMaterial_Click"/>
-        <Button x:Name="btn_ListarMateriais" Content="Listar materiais" HorizontalAlignment="Left" Margin="26,130,0,0" VerticalAlignment="Top" Width="88" Click="btn_ListarMateriais_Click"/>
-
+        <Button x:Name="btn_SalvarMaterial" Content="Salvar" HorizontalAlignment="Left" Margin="132,135,0,0" VerticalAlignment="Top" Width="120" Click="btn_SalvarMaterial_Click"/>
+        <Button x:Name="btn_ListarMateriais" Content="Listar materiais" HorizontalAlignment="Left" Margin="26,135,0,0" VerticalAlignment="Top" Width="88" Click="btn_ListarMateriais_Click"/>
+        <ComboBox x:Name="cbo_armazens" HorizontalAlignment="Left" Margin="132,108,0,0" VerticalAlignment="Top" Width="149" ItemsSource="{Binding}"  SelectedValuePath="ArmazemId" DisplayMemberPath="Local" SelectedItem="{Binding ItemSelecionado}"  SelectionChanged="cbo_armazens_SelectionChanged">
+        </ComboBox>
+        <TextBox x:Name="txt_Quantidade_Cadastrada" HorizontalAlignment="Left" Height="23" Margin="262,77,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="41"/>
     </Grid>
 </Window>

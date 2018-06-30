@@ -1,0 +1,17 @@
+﻿<Window x:Class="ControleEstoque.EditArmazem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControleEstoque"
+        mc:Ignorable="d"
+        Title="EditArmazem" Height="300" Width="300">
+    <Grid>
+        <Label x:Name="label" Content="Nome" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="Descrição" HorizontalAlignment="Left" Margin="20,51,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_editar_NomeArmazem" HorizontalAlignment="Left" Height="23" Margin="91,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txt_Editar_DescArmazem" HorizontalAlignment="Left" Height="23" Margin="91,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btn_Atualiza_Armazem" Content="Button" HorizontalAlignment="Left" Margin="91,94,0,0" VerticalAlignment="Top" Width="120" Height="25" Click="btn_Atualiza_Armazem_Click"/>
+
+    </Grid>
+</Window>

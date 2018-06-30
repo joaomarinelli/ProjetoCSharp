@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Controllers.DAL
 {
-    class Contexto : DbContext
+   public class Contexto : DbContext
     {
         public Contexto() : base("strConn")
         {
@@ -27,5 +27,7 @@ namespace Controllers.DAL
         public DbSet<Armazem> Armazens { get; set; }
 
         public DbSet<Funcionario> Funcionarios { get; set; }
+
+        public DbSet<Retirada> Retiradas { get; set; }
     }
 }

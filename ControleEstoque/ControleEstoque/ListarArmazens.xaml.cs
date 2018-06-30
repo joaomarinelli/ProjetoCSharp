@@ -1,4 +1,5 @@
 ﻿using Controllers;
+using Controllers.DAL;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ namespace ControleEstoque
     /// </summary>
     public partial class ListarArmazens : Window
     {
+        private static Contexto ctx = new Contexto();
         public ListarArmazens()
         {
             InitializeComponent();
@@ -45,6 +47,27 @@ namespace ControleEstoque
             cadArm.Show();
             this.Close();
 
+        }
+
+        private void btnUpdate_Armazem_Click(object sender, RoutedEventArgs e)
+        {
+            EditArmazem editArm = new EditArmazem();
+
+            editArm.Show();
+            this.Close();
+        }
+
+        private void btnDelete_Armazem_Click(object sender, RoutedEventArgs e)
+        {
+            int id = (dg_ListarArmazens.SelectedItem as Armazem).ArmazemId;
+
+            ArmazemController armazemController = new ArmazemController();
+
+            armazemController.Excluir(id);
+
+            this.Close();
+            ListarArmazens listArm = new ListarArmazens();
+            listArm.Show();
         }
     }
 }
