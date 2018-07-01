@@ -38,8 +38,15 @@ namespace ControleEstoque
 
         private void dg_ListaFuncionarios_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            DataGrid dg = ((DataGrid)sender);
-            Funcionario func = (Funcionario)dg.Items[dg.SelectedIndex];
+            try
+            {
+                DataGrid dg = ((DataGrid)sender);
+                Funcionario func = (Funcionario)dg.Items[dg.SelectedIndex];
+            }catch(Exception ex)
+            {
+                MessageBox.Show(" Operação inválida! (" + ex.Message + " )");
+            }
+            
         }
 
         private void btn_AddFuncionario_Click(object sender, RoutedEventArgs e)
@@ -50,20 +57,42 @@ namespace ControleEstoque
         }
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-            int id = (dg_ListaFuncionarios.SelectedItem as Funcionario).FuncionarioId;
-            EditFuncionario EditFunc = new EditFuncionario(id);
-            EditFunc.Show();
-            this.Close();
+            try
+            {
+                int id = (dg_ListaFuncionarios.SelectedItem as Funcionario).FuncionarioId;
+                EditFuncionario EditFunc = new EditFuncionario(id);
+                EditFunc.Show();
+                this.Close();
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(" Operação inválida! (" + ex.Message+ " )");
+            }
+            
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
 
-            int id = (dg_ListaFuncionarios.SelectedItem as Funcionario).FuncionarioId;
-            FuncionarioController funcController = new FuncionarioController();
+                int id = (dg_ListaFuncionarios.SelectedItem as Funcionario).FuncionarioId;
+                FuncionarioController funcController = new FuncionarioController();
 
-            funcController.Excluir(id);
-           // dg_ListaFuncionarios.ItemsSource = ctx.Funcionarios.ToList();
+                funcController.Excluir(id);
+                MessageBox.Show("Funcionário excluido com Sucesso!");
+
+                ListarFuncionarios dg_listarFuncionarios = new ListarFuncionarios();
+                dg_listarFuncionarios.Show();
+                this.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(" Operação inválida! (" + ex.Message + " )");
+            }
+
         }
 
 

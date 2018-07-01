@@ -32,19 +32,25 @@ namespace ControleEstoque
 
         private void btn_salvarFunc_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
 
+                FuncionarioController funcController = new FuncionarioController();
+                Funcionario func = funcController.BuscarPorId(id);
+                func.NomeFuncionario = tb_nomeFunc.Text;
+                func.Cargo = tb_cargoFunc.Text;
 
-            FuncionarioController funcController = new FuncionarioController();
-            Funcionario func = funcController.BuscarPorId(id);
-            func.NomeFuncionario = tb_nomeFunc.Text;
-            func.Cargo = tb_cargoFunc.Text;
+                funcController.Atualizar(func);
+                MessageBox.Show("Funcionairo atualizado com sucesso!");
 
-            funcController.Atualizar(func);
-            MessageBox.Show("Funcionairo atualizado com sucesso!");
+                ListarFuncionarios dg_listarFuncionarios = new ListarFuncionarios();
+                dg_listarFuncionarios.Show();
+                this.Close();
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Erro ao atualizar funcionário! ("+ex.Message+")");
+            }
 
-            ListarFuncionarios dg_listarFuncionarios = new ListarFuncionarios();
-            dg_listarFuncionarios.Show();
-            this.Close();
         }
     }
 }

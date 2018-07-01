@@ -49,7 +49,7 @@ namespace ControleEstoque
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao salvar o funcionario (" + ex.Message + ")");
+                MessageBox.Show("Erro ao salvar o funcionário (" + ex.Message + ")");
             }
         }
 
