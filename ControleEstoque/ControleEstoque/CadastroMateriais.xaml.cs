@@ -42,7 +42,7 @@ namespace ControleEstoque
         {
             try
             {
-                string var;
+                
                 Material mat = new Material();
 
                 //mat.Local_Armazem = (Armazem)this.cbo_armazens.SelectedItem;
