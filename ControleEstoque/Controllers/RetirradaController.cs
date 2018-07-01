@@ -43,11 +43,6 @@ namespace Controllers
             }
         }
 
-        public IList<Retirada> ListarPorNome(string nome)
-        {
-            return null;
-        }
-
         public IList<Retirada> ListarTodos()
         {
             return contexto.Retiradas.ToList();
