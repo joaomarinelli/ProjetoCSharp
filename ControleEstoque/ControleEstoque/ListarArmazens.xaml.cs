@@ -46,5 +46,29 @@ namespace ControleEstoque
             this.Close();
 
         }
+
+        private void btnUpdate_Armazem(object sender, RoutedEventArgs e)
+        {
+            int id = (dg_ListarArmazens.SelectedItem as Armazem).ArmazemId;
+            //Edi EditArmazem = new EditArmazem(id);
+            EditArmazem editArm = new EditArmazem(id);
+            editArm.Show(); 
+            this.Close();
+        }
+
+        private void btnDelete_Armazem_Click(object sender, RoutedEventArgs e)
+        {
+            int id = (dg_ListarArmazens.SelectedItem as Armazem).ArmazemId;
+            ArmazemController armazemController = new ArmazemController();
+
+            armazemController.Excluir(id);
+        }
+
+        private void dg_ListarArmazens_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DataGrid dg = ((DataGrid)sender);
+
+            Armazem arm = (Armazem)dg.Items[dg.SelectedIndex];
+        }
     }
 }

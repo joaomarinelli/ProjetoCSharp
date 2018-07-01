@@ -15,8 +15,6 @@ namespace Controllers
 
         public void Adicionar(Retirada entity)
         {
-            contexto.Retiradas.Add(entity);
-            contexto.SaveChanges();
         }
 
         public void Atualizar(Retirada entity)
@@ -41,7 +39,7 @@ namespace Controllers
 
         public IList<Retirada> ListarTodos()
         {
-            return contexto.Retiradas.ToList();
+            throw new NotImplementedException();
         }
     }
 }

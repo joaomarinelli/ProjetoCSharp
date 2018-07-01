@@ -7,7 +7,42 @@
         mc:Ignorable="d"
         Title="ListarArmazens" Height="300" Width="300" WindowStartupLocation="CenterScreen">
     <Grid>
-        <DataGrid x:Name="dg_ListarArmazens" Margin="0,50,0,0" SelectionChanged="dg_armazens_SelectionChanged" Loaded="Window_Loaded_Armazem"/>
+        <DataGrid x:Name="dg_ListarArmazens" Margin="0,50,0,0" SelectionChanged="dg_ListarArmazens_SelectionChanged" Loaded="Window_Loaded_Armazem">
+        <DataGrid.Columns>
+            <DataGridTextColumn Binding="{Binding ArmazemId}" Header="ID"/>
+            <DataGridTextColumn Binding="{Binding Local}" Header="Nome Funcionário"/>
+            <DataGridTemplateColumn>
+                <DataGridTemplateColumn.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock>Atualizar</TextBlock>
+                    </DataTemplate>
+                </DataGridTemplateColumn.HeaderTemplate>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                                <Button x:Name="btnUpdate_Armazem" Content="Atualizar" Click="btnUpdate_Armazem"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+
+            <DataGridTemplateColumn>
+                <DataGridTemplateColumn.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock>Deletar</TextBlock>
+                    </DataTemplate>
+                </DataGridTemplateColumn.HeaderTemplate>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                                <Button x:Name="btnDelete_Armazem" Content="Deletar" Click="btnDelete_Armazem_Click"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+
+        </DataGrid.Columns>
+        </DataGrid>
         <Button x:Name="btn_AddArmazem" Content="Novo registro" Margin="11,10,0,0" FontWeight="Bold" Background="#FF21C928" Click="btn_AddArmazem_Click" HorizontalAlignment="Left" Width="106" Height="25" VerticalAlignment="Top"/>
 
     </Grid>
