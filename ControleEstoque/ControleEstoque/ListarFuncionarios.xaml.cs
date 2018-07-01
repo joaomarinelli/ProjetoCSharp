@@ -63,7 +63,6 @@ namespace ControleEstoque
             FuncionarioController funcController = new FuncionarioController();
 
             funcController.Excluir(id);
-           // dg_ListaFuncionarios.ItemsSource = ctx.Funcionarios.ToList();
         }
 
 

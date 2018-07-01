@@ -42,12 +42,16 @@ namespace ControleEstoque
         {
             try
             {
+                string var;
                 Material mat = new Material();
 
-                mat.Local_Armazem = (Armazem)this.cbo_armazens.SelectedItem;
+                //mat.Local_Armazem = (Armazem)this.cbo_armazens.SelectedItem;
 
                 mat.MaterialNome = tb_NomeMaterial.Text;
                 mat.MaterialDesc = tb_MaterialDesc.Text;
+                mat.QuantidadeCadastrada = txt_Quantidade_Cadastrada.Text;
+                var selectedItem = ((Armazem)cbo_armazens.SelectedItem).ArmazemId;
+                
                 //mat.Local_Armazem = cbo_armazens
                 //mat.Local_Armazem = cbo_armazens.SelectedItem.ToString;
                 //var selectedItem = cbo_armazens.SelectedItem;
@@ -87,7 +91,12 @@ namespace ControleEstoque
 
         private void cbo_armazens_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+           
+        }
 
+        private void txt_show_armazem_TextChanged(object sender, TextChangedEventArgs e)
+        {
+           
         }
     }
 }

@@ -34,9 +34,12 @@ namespace ControleEstoque
 
         private void btn_salvar_update_material_Click(object sender, RoutedEventArgs e)
         {
-            Material mat = new Material();
-
+            
             MaterialController materialController = new MaterialController();
+            Material mat = materialController.BuscarPorId(Id);
+            mat.MaterialNome = tb_update_nome_material.Text;
+            mat.MaterialDesc = tb_update_desc_material.Text;
+            mat.QuantidadeCadastrada = tb_update_qtde_material.Text;
             materialController.Atualizar(mat);
             this.Close();
             MessageBox.Show("Material salvo com sucesso!");

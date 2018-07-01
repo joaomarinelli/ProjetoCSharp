@@ -5,36 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ControleEstoque"
         mc:Ignorable="d"
-        Title="ListaMateriais" Height="377" Width="885" WindowStartupLocation="CenterScreen">
+        Title="ListaMateriais" Height="335.815" Width="409.79" WindowStartupLocation="CenterScreen">
     <Grid>
-        <DataGrid x:Name="dg_ListaMateriais" x:FieldModifier="public" AutoGenerateColumns="False" ColumnWidth="*" Margin="10,10,269,0" Width="598" SelectionChanged="dg_ListaMateriais_SelectionChanged_1" Loaded="Windows_Loaded_Materiais" >
+        <DataGrid x:Name="dg_ListaMateriais" Margin="0,50,0,0" AutoGenerateColumns="False" SelectionChanged="dg_ListaMateriais_SelectionChanged" Loaded="Windows_Loaded_Materiais">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Codigo" Binding="{Binding CodMaterial}" />
-                <DataGridTextColumn Header="Nome" Binding="{Binding MaterialNome}" />
-                <DataGridTextColumn Header="Descrição" Binding="{Binding MaterialDesc}" />
-                <DataGridTextColumn Header="Qtde." Binding="{Binding QuantidadeCadastrada}" />
-                <DataGridTextColumn Header="Armazem" Binding="{Binding Local_Armazem}" />
+                <DataGridTextColumn Binding="{Binding MaterialId}" Header="ID"/>
+                <DataGridTextColumn Binding="{Binding MaterialNome}" Header="Nome Material"/>
+                <DataGridTextColumn Binding="{Binding MaterialDesc}" Header="Descrição"/>
+                <DataGridTextColumn Binding="{Binding QuantidadeCadastrada}" Header="Qtde"/>
+                <DataGridTextColumn Binding="{Binding Armazem.Local}" Header="Local_Armazem"/>
                 <DataGridTemplateColumn>
-
+                    <DataGridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock>Atualizar</TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.HeaderTemplate>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="btnUpdate_Material" Content="Atualizar" Click="btnUpdate_Material_Click"/>
+                            </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock>Deletar</TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.HeaderTemplate>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="btnDelete_Material" Content="Deletar" Click="btnDelete_Material_Click"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
             </DataGrid.Columns>
         </DataGrid>
-        <TextBox x:Name="txt_id_material" HorizontalAlignment="Left" Height="23" Margin="741,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label" Content="Código do Material" HorizontalAlignment="Left" Margin="628,32,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txt_nome_material1" HorizontalAlignment="Left" Height="24" Margin="741,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label1" Content="Nome" HorizontalAlignment="Left" Margin="628,74,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2" Content="Descrição" HorizontalAlignment="Left" Margin="628,118,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txt_desc_material" HorizontalAlignment="Left" Height="23" Margin="741,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label3" Content="Qtde." HorizontalAlignment="Left" Margin="628,164,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txt_qtde_material" HorizontalAlignment="Left" Height="23" Margin="741,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btn_adicionar_material" Content="Adicionar" HorizontalAlignment="Left" Margin="701,212,0,0" VerticalAlignment="Top" Width="120" Height="32" Click="btn_adicionar_material_Click"/>
-        <Button x:Name="btn_salvar_material" Content="Alterar" HorizontalAlignment="Left" Margin="701,249,0,0" VerticalAlignment="Top" Width="120" Height="33" Click="btn_salvar_material_Click"/>
-        <Button x:Name="btn_excluir_material" Content="Excluir" HorizontalAlignment="Left" Margin="701,287,0,0" VerticalAlignment="Top" Width="120" Height="31" Click="btn_excluir_material_Click"/>
+        <Button x:Name="btn_AddMaterial" Content="Novo registro" Width="106" Margin="11,10,0,0" Background="#FF12D447" FontWeight="Bold" Click="btn_AddMaterial_Click" RenderTransformOrigin="0.554,0.523" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top"/>
+
     </Grid>
 
 </Window>

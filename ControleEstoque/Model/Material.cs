@@ -23,5 +23,7 @@ namespace Model
         public string QuantidadeCadastrada { get; set; }
 
         public Armazem Local_Armazem { get; set; }
+
+
     }
 }
