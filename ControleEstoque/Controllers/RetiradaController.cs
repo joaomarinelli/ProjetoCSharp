@@ -12,34 +12,40 @@ namespace Controllers
     class RetiradaController : IBaseController<Retirada>
     {
         private Contexto contexto = new Contexto();
-
         public void Adicionar(Retirada entity)
         {
+            contexto.Retiradas.Add(entity);
+            contexto.SaveChanges();
         }
 
         public void Atualizar(Retirada entity)
         {
-            throw new NotImplementedException();
+            contexto.Entry(entity).State =
+                System.Data.Entity.EntityState.Modified;
+
+            contexto.SaveChanges();
         }
 
         public Retirada BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+           return contexto.Retiradas.Find(id);
         }
 
         public void Excluir(int id)
         {
-            throw new NotImplementedException();
-        }
+            Retirada r = BuscarPorId(id);
 
-        public IList<Retirada> ListarPorNome(string nome)
-        {
-            throw new NotImplementedException();
+            if (r != null)
+            {
+              
+                contexto.Retiradas.Remove(r);
+                contexto.SaveChanges();
+            }
         }
 
         public IList<Retirada> ListarTodos()
         {
-            throw new NotImplementedException();
+            return contexto.Retiradas.ToList();
         }
     }
 }

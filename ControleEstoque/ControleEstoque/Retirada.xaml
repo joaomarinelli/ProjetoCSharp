@@ -17,7 +17,7 @@
         <Label x:Name="label" Content="Quantidade" HorizontalAlignment="Left" Margin="21,67,0,0" VerticalAlignment="Top" Height="26" Width="72"/>
         <Label x:Name="label_func_retirada" Content="Quem retirou" HorizontalAlignment="Left" Margin="21,101,0,0" VerticalAlignment="Top" Height="26" Width="81"/>
         <ComboBox x:Name="cb_listaFuncionarios" HorizontalAlignment="Left" Margin="143,105,0,0" VerticalAlignment="Top" Width="160" Height="22" SelectionChanged="cb_listaFuncionarios_SelectionChanged"/>
-        <Button x:Name="btn_salvar_retirada" Content="Salvar" HorizontalAlignment="Left" Margin="143,142,0,0" VerticalAlignment="Top" Width="160" Height="29"/>
-
+        <Button x:Name="btn_salvar_retirada" Content="Salvar" HorizontalAlignment="Left" Margin="143,142,0,0" VerticalAlignment="Top" Width="160" Height="29" Click="btn_salvar_retirada_Click_1"/>
+        
     </Grid>
 </Window>
