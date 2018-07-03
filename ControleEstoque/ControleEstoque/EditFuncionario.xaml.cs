@@ -40,6 +40,12 @@ namespace ControleEstoque
                 func.NomeFuncionario = tb_nomeFunc.Text;
                 func.Cargo = tb_cargoFunc.Text;
 
+                if (string.IsNullOrEmpty(tb_nomeFunc.Text))
+                    throw new NullReferenceException("O campo nome é obrigatório.");
+
+                if (string.IsNullOrEmpty(tb_cargoFunc.Text))
+                    throw new NullReferenceException("O campo cargo é obrigatório.");
+
                 funcController.Atualizar(func);
                 MessageBox.Show("Funcionairo atualizado com sucesso!");
 

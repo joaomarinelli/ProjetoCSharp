@@ -37,33 +37,6 @@ namespace ControleEstoque
             Material mat = (Material)dg.Items[dg.SelectedIndex];
         }
 
-
-        private void tb_qtde_retirada_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void cb_listaMateriais(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cbo_listaMateriais(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void btn_salvar_retirada_Click(object sender, RoutedEventArgs e)
-        {
-           
-        }
-
-
         private void cb_listaFuncionarios_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 

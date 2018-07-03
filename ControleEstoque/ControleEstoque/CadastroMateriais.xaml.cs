@@ -28,6 +28,13 @@ namespace ControleEstoque
             bindcombo();
         }
 
+        void FillArmazens()
+        {
+            Contexto ctx = new Contexto();
+            List<Armazem> lst = ctx.Armazens.ToList();
+            cbo_armazens.ItemsSource = lst;
+        }
+
         public List<Armazem> Lista { get; set; }
         private void bindcombo()
         {
@@ -50,7 +57,13 @@ namespace ControleEstoque
                 mat.MaterialNome = tb_NomeMaterial.Text;
                 mat.MaterialDesc = tb_MaterialDesc.Text;
                 mat.QuantidadeCadastrada = txt_Quantidade_Cadastrada.Text;
-                var selectedItem = ((Armazem)cbo_armazens.SelectedItem).ArmazemId;
+                
+                //var selectedItem = ((Armazem)cbo_armazens.SelectedItem).ArmazemId;
+                //var item = cbo_armazens.SelectedItem as Armazem;
+
+                var selectedItem = cbo_armazens.SelectedItem;
+
+               
                 
                 //mat.Local_Armazem = cbo_armazens
                 //mat.Local_Armazem = cbo_armazens.SelectedItem.ToString;
@@ -59,6 +72,17 @@ namespace ControleEstoque
                 //ComboBoxItem cbi = cbo_armazens.ItemContainerGenerator.ContainerFromItem(selectedItem) as ComboBoxItem;
 
                 MaterialController materialController = new MaterialController();
+                if (string.IsNullOrEmpty(tb_NomeMaterial.Text))
+                    throw new NullReferenceException("O campo nome é obrigatório.");
+
+                if (string.IsNullOrEmpty(tb_MaterialDesc.Text))
+                    throw new NullReferenceException("O campo descrição é obrigatório.");
+
+                if (string.IsNullOrEmpty(txt_Quantidade_Cadastrada.Text))
+                    throw new NullReferenceException("O campo quantidade é obrigatório.");
+
+
+
                 materialController.Adicionar(mat);
                 this.Close();
                 MessageBox.Show("Material salvo com sucesso!");
@@ -84,14 +108,10 @@ namespace ControleEstoque
             telaListaMateriais.ShowDialog();
         }
 
-        private void cbo_materiais_armazens_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
-        }
 
         private void cbo_armazens_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           
+            int IdArmazem = Convert.ToInt32(cbo_armazens.SelectedValue);
         }
 
         private void txt_show_armazem_TextChanged(object sender, TextChangedEventArgs e)

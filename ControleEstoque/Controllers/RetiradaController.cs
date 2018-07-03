@@ -43,6 +43,11 @@ namespace Controllers
             }
         }
 
+        public IList<Retirada> ListarPorNome(string nome)
+        {
+            throw new NotImplementedException();
+        }
+
         public IList<Retirada> ListarTodos()
         {
             return contexto.Retiradas.ToList();

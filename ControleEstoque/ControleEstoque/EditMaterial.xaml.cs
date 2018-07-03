@@ -34,15 +34,31 @@ namespace ControleEstoque
 
         private void btn_salvar_update_material_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+
             
             MaterialController materialController = new MaterialController();
             Material mat = materialController.BuscarPorId(Id);
             mat.MaterialNome = tb_update_nome_material.Text;
             mat.MaterialDesc = tb_update_desc_material.Text;
             mat.QuantidadeCadastrada = tb_update_qtde_material.Text;
+
+            if (string.IsNullOrEmpty(tb_update_nome_material.Text))
+                throw new NullReferenceException("O campo nome é obrigatório.");
+            if (string.IsNullOrEmpty(tb_update_desc_material.Text))
+                throw new NullReferenceException("O campo descrição é obrigatório.");
+            if (string.IsNullOrEmpty(tb_update_qtde_material.Text))
+                throw new NullReferenceException("O campo quantidade é obrigatório.");
             materialController.Atualizar(mat);
             this.Close();
             MessageBox.Show("Material salvo com sucesso!");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao atualizar material! (" + ex.Message + ")");
+            }
         }
     }
 }

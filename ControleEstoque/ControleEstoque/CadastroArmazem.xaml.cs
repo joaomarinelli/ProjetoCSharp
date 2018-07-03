@@ -36,6 +36,12 @@ namespace ControleEstoque
                 arm.ArmazemDesc = tb_DescArmazem.Text;
 
                 ArmazemController armazemController = new ArmazemController();
+
+                if (string.IsNullOrEmpty(tb_local.Text))
+                    throw new NullReferenceException("O campo nome é obrigatório.");
+
+                if (string.IsNullOrEmpty(tb_DescArmazem.Text))
+                    throw new NullReferenceException("O campo descrição é obrigatório.");
                 armazemController.Adicionar(arm);
 
                 this.Close();

@@ -36,6 +36,13 @@ namespace ControleEstoque
                 func.Cargo = tb_cargoFunc.Text;
 
                 FuncionarioController funcionarioController = new FuncionarioController();
+
+                if (string.IsNullOrEmpty(tb_nomeFunc.Text))
+                    throw new NullReferenceException("O campo nome é obrigatório.");
+
+                if (string.IsNullOrEmpty(tb_cargoFunc.Text))
+                    throw new NullReferenceException("O campo cargo é obrigatório.");
+
                 funcionarioController.Adicionar(func);
 
                 
