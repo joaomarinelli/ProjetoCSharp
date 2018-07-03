@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ControleEstoque"
         mc:Ignorable="d"
-        Title="CadastroMateriais" Height="300" Width="400">
+        Title="CadastroMateriais" Height="300" Width="400" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label x:Name="label_Material_Nome" Content="Nome do material" HorizontalAlignment="Left" Margin="26,43,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tb_NomeMaterial" HorizontalAlignment="Left" Height="23" Margin="132,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="tb_NomeMaterial_TextChanged"/>

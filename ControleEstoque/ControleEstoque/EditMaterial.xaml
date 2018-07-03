@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ControleEstoque"
         mc:Ignorable="d"
-        Title="EditMaterial" Height="300" Width="300">
+        Title="EditMaterial" Height="300" Width="300" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label x:Name="label" Content="Nome" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.263,0.231"/>
         <Label x:Name="label1" Content="Descrição" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>

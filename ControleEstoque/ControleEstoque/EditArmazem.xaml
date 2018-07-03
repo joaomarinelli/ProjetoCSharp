@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ControleEstoque"
         mc:Ignorable="d"
-        Title="EditArmazem" Height="300" Width="300">
+        Title="EditArmazem" Height="300" Width="300" WindowStartupLocation="CenterScreen">
     <Grid>
         <TextBox x:Name="txt_edit_localArmazem" HorizontalAlignment="Left" Height="23" Margin="116,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txt_edir_descArmazem" HorizontalAlignment="Left" Height="23" Margin="116,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

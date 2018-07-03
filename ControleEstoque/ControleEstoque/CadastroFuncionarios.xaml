@@ -5,13 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ControleEstoque"
         mc:Ignorable="d"
-        Title="CadastroFuncionarios" Height="300" Width="300">
+        Title="CadastroFuncionarios" Height="300" Width="300" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="29*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
         <Label x:Name="label_NomeFunc" Content="Nome do funcionário" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tb_nomeFunc" HorizontalAlignment="Left" Height="23" Margin="138,13,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_nomeFunc" HorizontalAlignment="Left" Height="23" Margin="138,13,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
         <Label x:Name="label_cargoFunc" Content="Cargo do funcionário" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tb_cargoFunc" HorizontalAlignment="Left" Height="23" Margin="138,41,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btn_salvarFunc" Content="Salvar" HorizontalAlignment="Left" Margin="138,69,0,0" VerticalAlignment="Top" Width="120" Height="31" BorderBrush="#FF15D37D" Click="btn_salvarFunc_Click">
+        <TextBox x:Name="tb_cargoFunc" HorizontalAlignment="Left" Height="23" Margin="138,41,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <Button x:Name="btn_salvarFunc" Content="Salvar" HorizontalAlignment="Left" Margin="138,69,0,0" VerticalAlignment="Top" Width="120" Height="31" BorderBrush="#FF15D37D" Click="btn_salvarFunc_Click" Grid.ColumnSpan="2">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF3F3F3" Offset="0"/>
