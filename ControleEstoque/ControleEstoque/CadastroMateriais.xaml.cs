@@ -28,12 +28,6 @@ namespace ControleEstoque
             bindcombo();
         }
 
-        void FillArmazens()
-        {
-            Contexto ctx = new Contexto();
-            List<Armazem> lst = ctx.Armazens.ToList();
-            cbo_armazens.ItemsSource = lst;
-        }
 
         public List<Armazem> Lista { get; set; }
         private void bindcombo()
@@ -61,7 +55,7 @@ namespace ControleEstoque
                 //var selectedItem = ((Armazem)cbo_armazens.SelectedItem).ArmazemId;
                 //var item = cbo_armazens.SelectedItem as Armazem;
 
-                var selectedItem = cbo_armazens.SelectedItem;
+                
 
                
                 
@@ -84,8 +78,9 @@ namespace ControleEstoque
 
 
                 materialController.Adicionar(mat);
-                this.Close();
                 MessageBox.Show("Material salvo com sucesso!");
+                this.Close();
+                
 
                 ListaMateriais dg_ListaMateriais = new ListaMateriais();
                 dg_ListaMateriais.Show();
@@ -106,12 +101,6 @@ namespace ControleEstoque
         {
             ListaMateriais telaListaMateriais = new ListaMateriais();
             telaListaMateriais.ShowDialog();
-        }
-
-
-        private void cbo_armazens_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            int IdArmazem = Convert.ToInt32(cbo_armazens.SelectedValue);
         }
 
         private void txt_show_armazem_TextChanged(object sender, TextChangedEventArgs e)

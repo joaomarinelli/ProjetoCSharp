@@ -65,6 +65,11 @@ namespace ControleEstoque
             MaterialController matController = new MaterialController();
 
             matController.Excluir(id);
+            MessageBox.Show("Material excluido com Sucesso!");
+
+            ListaMateriais dg_listamateriais = new ListaMateriais();
+            dg_listamateriais.Show();
+            this.Close();
         }
     }
 }   

@@ -51,8 +51,11 @@ namespace ControleEstoque
             if (string.IsNullOrEmpty(tb_update_qtde_material.Text))
                 throw new NullReferenceException("O campo quantidade é obrigatório.");
             materialController.Atualizar(mat);
-            this.Close();
             MessageBox.Show("Material salvo com sucesso!");
+
+                ListaMateriais dg_listarMateriais = new ListaMateriais();
+                dg_listarMateriais.Show();
+                this.Close();
 
             }
             catch (Exception ex)
